@@ -3,7 +3,44 @@
     <head>
         <link rel="stylesheet" href="stylesheet.css">
         <link rel="icon" type="image/x-icon" href="favicon.ico">
-        <title>Titulní stránka</title>
+        <title>Tabulka</title>
+        <style>
+            main article div table{
+                padding:0;
+                margin:0;
+                font-size: 30px;
+            }
+            main article div table tbody{
+                padding:0;
+                margin:0;
+            }
+            main article div table thead{
+                padding:0;
+                margin:0;
+            }
+            main article div table tr{
+                padding:0;
+                margin:0;
+            }
+            main article div table thead th{
+                padding:6px;
+                margin:0px;
+                text-align: center;
+                background-color: #FDD077;
+                border: 4px solid #362709;
+            }
+            main article div table tbody td{
+                padding:6px;
+                margin:0px;
+                text-align: center;
+                background-color: #FDD077;
+                border: 4px solid #362709;
+            }
+            main article div{
+                display: flex;
+                justify-content: center;
+            }
+        </style>
     </head>
     <body>
         <nav>
@@ -14,5 +51,45 @@
                 <li><a href="/home/wraithmain/WEBHW%232/fotogalerie.html">Fotogalerie</a></li>
             </ul>
         </nav>
+        <main>
+            <article>
+                <h1>Tabulka</h1>
+                <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="4">Bash verze</th>
+                        </tr>
+                        <tr>
+                            <th>Verze</th>
+                            <th>Datum</th>
+                            <th>Dostupnost</th>
+                            <th>Vlastnost</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>5.2</td>
+                            <td>2022-09-26 </td>
+                            <td>Veřejná</td>
+                            <td>new internal timer framework</td>
+                        </tr>
+                        <tr>
+                            <td>4.0</td>
+                            <td>2009-02-20</td>
+                            <td>Veřejná</td>
+                            <td>new variable $BASHPID</td>
+                        </tr>
+                        <tr>
+                            <td>3.2</td>
+                            <td>2006-10-11 </td>
+                            <td>Veřejná</td>
+                            <td>Shells running in posix mode no longer set $HOME</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+            </article>
+        </main>
     </body>
 </html>
