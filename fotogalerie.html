@@ -3,7 +3,17 @@
     <head>
         <link rel="stylesheet" href="stylesheet.css">
         <link rel="icon" type="image/x-icon" href="favicon.ico">
-        <title>Titulní stránka</title>
+        <title>Fotogalerie</title>
+        <style>
+            main article div{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+            }
+            main article div img{
+                width: 100%;
+                margin: auto;
+            }
+        </style>
     </head>
     <body>
         <nav>
@@ -14,5 +24,23 @@
                 <li class="InactiveLink"><a href="/home/wraithmain/WEBHW%232/fotogalerie.html">Fotogalerie</a></li>
             </ul>
         </nav>
+        <main>
+            <article>
+                <h1>Fotogalerie</h1>
+                <div>
+                    <img title="Richard Stallman" src="./img/rms0.jpg">
+                    <img title="Richard Stallman" src="./img/rms1.jpg">
+                    <img title="Richard Stallman" src="./img/rms2.webp">
+                    <img title="Richard Stallman" src="./img/rms3.jpg">
+                    <img title="Richard Stallman" src="./img/rms4.jpg">
+                    <img title="Richard Stallman" src="./img/rms5.jpg">
+                    <img title="Richard Stallman" src="./img/rms6.jpeg">
+                    <img title="Richard Stallman" src="./img/rms7.jpeg">
+                    <img title="Richard Stallman" src="./img/rms8.jpg">
+                    <img title="Richard Stallman" src="./img/rms9.jpg">
+                    <img title="Richard Stallman" src="./img/sexyRichard.jpg">
+                </div>
+            </article>
+        </main>
     </body>
 </html>
