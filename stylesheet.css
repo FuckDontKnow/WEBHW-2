@@ -56,3 +56,17 @@ main{
 main article{
     grid-column: 2;
 }
+
+main article h1{
+text-align: center;
+font-size: 40px;
+}
+
+main article h2{
+text-align: center;
+font-size: 30px;
+}
+
+main article p {
+    font-size: 20px;
+}

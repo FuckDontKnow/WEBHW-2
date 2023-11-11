@@ -5,9 +5,38 @@
         <link rel="icon" type="image/x-icon" href="favicon.ico">
         <title>Titulní stránka</title>
         <style>
-            main article h1{
-            text-align: center;
-            font-size: 40px;
+            .listdiv{
+                text-align: center;
+            }
+            .listdiv ul{
+                display:inline-block;
+            }
+            .listdiv ul li{
+                text-align: left;
+                font-size: 20px;
+            }
+            .listdiv ol{
+                display:inline-block;
+                background-color: #FFF8EA;
+            }
+            .listdiv ol li{
+                text-align: left;
+                font-size: 20px;
+            }
+            .session{
+                color: red;
+            }
+            .ver{
+                color: magenta;
+            }
+            .user{
+                color: green;
+            }
+            .dir{
+                color: blue;
+            }
+            em{
+                font-style:normal;
             }
         </style>
     </head>
@@ -24,6 +53,38 @@
             <article>
                 <h1>Bash</h1>
                 <p>Bash is a Unix shell and command language written by Brian Fox for the GNU Project as a free software replacement for the Bourne shell. First released in 1989, it has been used as the default login shell for most Linux distributions. Bash was one of the first programs Linus Torvalds ported to Linux, alongside GCC. A version is also available for Windows 10 and Windows 11 via the Windows Subsystem for Linux. It is also the default user shell in Solaris 11.[19] Bash was also the default shell in versions of Apple macOS from 10.3 (originally, the default shell was tcsh) to 10.15 (macOS Catalina), which changed the default shell to zsh, although Bash remains available as an alternative shell.</p>
+                <h2>Historie</h2>
+                <p>Brian Fox began coding Bash on January 10, 1988, after <a href="./img/sexyRichard.jpg" target="_blank">Richard Stallman</a> became dissatisfied with the lack of progress being made by a prior developer. Stallman and the Free Software Foundation (FSF) considered a free shell that could run existing shell scripts so strategic to a completely free system built from BSD and GNU code that this was one of the few projects they funded themselves, with Fox undertaking the work as an employee of FSF. Fox released Bash as a beta, version .99, on June 8, 1989, and remained the primary maintainer until sometime between mid-1992 and mid-1994, when he was laid off from FSF and his responsibility was transitioned to another early contributor, Chet Ramey.</p>
+                <h2>Vlastnosti</h2>
+                <p>The Bash command syntax is a superset of the Bourne shell command syntax. Bash supports brace expansion, command line completion (Programmable Completion), basic debugging and signal handling (using trap) since bash 2.05a among other features. Bash can execute the vast majority of Bourne shell scripts without modification, with the exception of Bourne shell scripts stumbling into fringe syntax behavior interpreted differently in Bash or attempting to run a system command matching a newer Bash builtin, etc. Bash command syntax includes ideas drawn from the KornShell (ksh) and the C shell (csh) such as command line editing, command history (history command), the directory stack, the $RANDOM and $PPID variables, and <a target="_blank" href="https://en.wikipedia.org/wiki/POSIX">POSIX</a> command substitution syntax $(…).</p>
+                <div class="listdiv">
+                    <ul>
+                        <li>Directory manipulation</li>
+                        <li>Job control</li>
+                        <li>Brace expansion</li>
+                        <li>Tilde expansion</li>
+                        <li>Aliases</li>
+                        <li>Command history</li>
+                        <li>Command-line editing</li>
+                        <li>Key bindings</li>
+                        <li>Integrated programming</li>
+                        <li>Control structures</li>
+                        <li>One dimensional arrays</li>
+                        <li>Dynamic loading</li>
+                        <li>Associative arrays</li>
+                    </ul>
+                </div>
+                <h2>Asociativní pole-příklad</h2>
+                <div class="listdiv">
+                    <ol>
+                        <li><em class="session">4</em>:<em class="ver">5.2.15</em>:<em class="user">wraithmain</em>:<em class="dir">~</em>$declare -A aspole</li>
+                        <li><em class="session">4</em>:<em class="ver">5.2.15</em>:<em class="user">wraithmain</em>:<em class="dir">~</em>$aspole[ovoce]=mango</li>
+                        <li><em class="session">4</em>:<em class="ver">5.2.15</em>:<em class="user">wraithmain</em>:<em class="dir">~</em>$echo ${aspole[ovoce]}</li>
+                        <li>mango</li>
+                        <li><em class="session">4</em>:<em class="ver">5.2.15</em>:<em class="user">wraithmain</em>:<em class="dir">~</em>$unset aspole[ovoce]</li>
+                        <li><em class="session">4</em>:<em class="ver">5.2.15</em>:<em class="user">wraithmain</em>:<em class="dir">~</em>$unset aspole</li>
+                    </ol>
+                </div>
             </article>
         </main>
     </body>
