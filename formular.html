@@ -3,7 +3,34 @@
     <head>
         <link rel="stylesheet" href="stylesheet.css">
         <link rel="icon" type="image/x-icon" href="favicon.ico">
-        <title>Titulní stránka</title>
+        <title>Formulář</title>
+        <style>
+            main article div{
+                display: flex;
+                justify-content: center;
+            }
+            main article div form fieldset legend{
+                background-color: #362709;
+                color: white;
+                padding: 2px 8px;
+            }
+            main article div form{
+                font-size: 30px;
+            }
+            .textI{
+                font-size: 20px;
+            }
+            .passwordI{
+                font-size: 20px;
+            }
+            main article div form p{
+                font-size: 20px;
+                margin: 10px 0px 0px;
+            }
+            main article div form label{
+                font-size: 20px;
+            }
+        </style>
     </head>
     <body>
         <nav>
@@ -14,5 +41,33 @@
                 <li><a href="/home/wraithmain/WEBHW%232/fotogalerie.html">Fotogalerie</a></li>
             </ul>
         </nav>
+        <main>
+            <article>
+                <h1>Formulář</h1>
+                <div>
+                    <form target="_self" method="POST" enctype="multipart/form-data" action="file:///home/wraithmain/WEBHW%232/formular.html">
+                        <fieldset>
+                            <legend>Dotazník</legend>
+                            <input class="textI" type="text" id="name" name="name" placeholder="Jméno" required> <br>
+                            <input class="textI" type="text" id="middlename" name="middlename" placeholder="Prostřední jméno" required> <br>
+                            <input class="textI" type="text" id="secondname" name="secondname" placeholder="Příjmení" required> <br>
+                            <input class="passwordI" type="password" id="password" name="password" placeholder="Heslo" required> <br>
+                            <p>Pohlaví</p>
+                            <input class="radioI" type="radio" id="m" value="m" name="gender" checked="checked" required>
+                            <label for="m">Muž</label> <br>
+                            <input class="radioI" type="radio" id="ž" value="ž" name="gender" required>
+                            <label for="ž">Žena</label> <br>
+                            <p>Původ</p>
+                            <input class="radioI" type="radio" id="E" value="E" name="origin" checked="checked" required>
+                            <label for="E">Evropa</label> <br>
+                            <input class="radioI" type="radio" id="A" value="A" name="origin" required>
+                            <label for="A">Asie</label> <br>
+                            <input class="radioI" type="radio" id="O" value="O" name="origin" required>
+                            <label for="O">Jiný</label> <br>
+                        </fieldset>
+                    </form>
+                </div>
+            </article>
+        </main>
     </body>
 </html>
