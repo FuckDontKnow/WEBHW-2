@@ -9,6 +9,9 @@
                 display: flex;
                 justify-content: center;
             }
+            main article div form fieldset{
+                border: 1px solid #362709;
+            }
             main article div form fieldset legend{
                 background-color: #362709;
                 color: white;
@@ -16,11 +19,9 @@
             }
             main article div form{
                 font-size: 30px;
+                margin: 0 0 30px 0;
             }
-            .textI{
-                font-size: 20px;
-            }
-            .passwordI{
+            main article div form input{
                 font-size: 20px;
             }
             main article div form p{
@@ -30,7 +31,83 @@
             main article div form label{
                 font-size: 20px;
             }
-        </style>
+            main article div form select option{
+                font-size: 20px;
+            }
+            #select{
+                margin: 5px 0px 10px 0px;
+            }
+            #thoughts{
+                resize: none;
+                font-size: 20px;
+                margin: 5px 0px 10px 0px;
+            }
+            main article div form div{
+                margin: 10px 0 0 0;
+                display: flex;
+            }
+            main article div form div input{
+                flex-grow: 1;
+            }
+            .radioI{
+                appearance: none;
+                margin: 0 0 0 5px;;
+                height: 20px;
+                width: 20px;
+                border-radius: 50%;
+                border: 2px solid #362709;
+                transition-property: border;
+                transition-duration: 0.5s;
+            }
+            .radioI:checked {
+                border: 8px solid #362709;
+            }
+            .checkboxI{
+                appearance: none;
+                margin: 0 0 0 5px;;
+                height: 20px;
+                width: 20px;
+                border: 2px solid #362709;
+                border-radius: 20%;
+                transition-property: background-color;
+                transition-duration: 0.5s;
+            }
+            .checkboxI:checked{
+                background-color: #362709;
+            }
+            #fileI{
+                display: none;
+            }
+            #filelabel{
+                border: 2px solid #362709;
+                display: inline-block;
+                padding: 4px 10px;
+                cursor: default;
+                background-color: #FFF8EA;
+                transition-property: background-color;
+                transition-duration: 0.5s;
+            }
+            #filelabel:hover{
+                border: 2px solid #362709;
+                display: inline-block;
+                padding: 4px 10px;
+                cursor: default;
+                background-color: #FFEECC;
+            }
+            .srI{
+                appearance: none;
+                cursor: default;
+                padding: 4px 10px;
+                border: 2px solid #362709;
+                background-color: #FFF8EA;
+                transition-property: background-color;
+                transition-duration: 0.5s;
+            }
+            .srI:hover{
+                background-color: #FFEECC;
+            }
+            </style>
+            <script></script>
     </head>
     <body>
         <nav>
@@ -64,10 +141,54 @@
                             <label for="A">Asie</label> <br>
                             <input class="radioI" type="radio" id="O" value="O" name="origin" required>
                             <label for="O">Jiný</label> <br>
+                            <p>Oblíbené shelly:</p>
+                            <input class="checkboxI" type="checkbox" id="c1" value="Bash" name="shell[]" checked="checked">
+                            <label for="c1">Bash</label> <br>
+                            <input class="checkboxI" type="checkbox" id="c2" value="Zsh" name="shell[]">
+                            <label for="c2">Zsh</label> <br>
+                            <input class="checkboxI" type="checkbox" id="c3" value="C shell" name="shell[]">
+                            <label for="c3">C shell</label> <br>
+                            <input class="checkboxI" type="checkbox" id="c4" value="Bourne shell" name="shell[]">
+                            <label for="c4">Bourne shell</label> <br>
+                            <p>Oblíbený žánr:</p>
+                            <select size="3" id="select" name="genre[]" multiple required>
+                                <!--defaultni value je text uvnitr, kdyz tam neni explicitne dany a nechce se mi to psat-->
+                                <option selected>Hard rock</option>
+                                <option>Alternative rock</option>
+                                <option>Metalcore</option>
+                                <option>Deathcore</option>
+                                <option>Trap metal</option>
+                                <option>My little pony</option>
+                            </select> <br>
+                            <label for="thoughts">Vaše myšlenky</label> <br>
+                            <textarea id="thoughts" rows="8" cols="30" name="thoughts" placeholder="Vaše myšlenky" required></textarea> <br>
+                            <label id="filelabel" for="fileI">Nahrát soubor</label>
+                            <input type="file" id="fileI" name="file[]" multiple required> <br>
+                            <div>
+                                <input class="srI" style="margin-right: 10px;" type="submit" value="Potvrdit">
+                                <input class="srI" style="margin-left: 10px;" type="reset" value="Znova">
+                            </div>
                         </fieldset>
                     </form>
                 </div>
             </article>
         </main>
+        <script>
+            const filelabel = document.getElementById("filelabel");
+            const fileI = document.getElementById("fileI");
+            fileI.addEventListener("input", change)
+            function change(e){
+                var files = fileI.files;
+                if(files.length==1){
+                filelabel.textContent = files.length + " soubor";
+                }
+                if(files.length>1 && files.length<5){
+                filelabel.textContent = files.length + " soubory";
+                }
+                if(files.length>=5){
+                filelabel.textContent = files.length + " souborů";
+                }
+            }
+        </script>
     </body>
 </html>
